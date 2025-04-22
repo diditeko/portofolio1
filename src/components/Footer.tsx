@@ -31,7 +31,7 @@ const Footer = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/diditekosetyoariandi"
+                href="https://www.linkedin.com/in/diditekosetyoariandi/"
                 className="text-gray-600 hover:text-green-700 transition-colors"
                 target="_blank"
                 rel="noreferrer"
@@ -47,7 +47,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:didit4111@fmail.com"
                 className="text-gray-600 hover:text-green-700 transition-colors"
               >
                 <Mail className="h-5 w-5" />

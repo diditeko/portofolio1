@@ -1,49 +1,55 @@
-
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useWeather } from "@/context/WeatherContext"; // <-- ADD
 
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Resume", href: "/resume" },
   { name: "Work Portfolio", href: "/work-portfolio" },
-  // { name: "Achievements", href: "/achievements" },
   { name: "Side Projects", href: "/side-projects" },
-  // { name: "Other Activities", href: "/other-activities" },
   { name: "Socials", href: "/socials" },
-  // { name: "Theme", href: "/Theme" },
 ];
 
 const Navbar = () => {
+  const { setCurrentWeather } = useWeather(); // <-- ADD
+
   return (
     <nav className="bg-white py-4 border-b border-gray-100 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
             <img
-              src="/goku-dragonball.gif" // Make sure this file is inside the public/ folder
+              src="/goku-dragonball.gif"
               alt="Goku Kamehameha"
               className="h-10 w-28 object-contain"
-
             />
-            {/* Uncomment below if you want to keep the name next to the gif */}
-            {/* <span className="text-green-700 text-xl font-bold">Didit Eko Setyo Ariandi</span> */}
           </Link>
         </div>
-        <div className="hidden md:flex space-x-1">
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-4">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.href}
               className={cn(
-                "px-3 py-2 text-sm font-medium transition-colors",
-                "hover:text-green-700 relative group"
+                "px-3 py-2 text-sm font-medium transition-colors hover:text-green-700 relative group"
               )}
             >
               {item.name}
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </Link>
           ))}
+          {/* Weather Buttons */}
+          <div className="flex items-center gap-2 ml-4">
+            <button onClick={() => setCurrentWeather("sunny")} className="text-yellow-500 text-xl">☀️</button>
+            <button onClick={() => setCurrentWeather("snowy")} className="text-blue-400 text-xl">❄️</button>
+            <button onClick={() => setCurrentWeather("rainy")} className="text-blue-600 text-xl">🌧️</button>
+            <button onClick={() => setCurrentWeather("spring")} className="text-pink-400 text-xl">🌸</button>
+          </div>
         </div>
+
+        {/* Mobile Hamburger Menu */}
         <div className="md:hidden">
           <button className="text-gray-700">
             <svg
