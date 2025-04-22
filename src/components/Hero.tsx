@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="relative flex justify-center">
             <div className="rounded-full border-4 border-white shadow-lg relative z-10">
               <img
-                src="dist/profille.jpeg"
+                src="profille.jpeg"
                 alt="Didit eko"
                 className="rounded-full w-64 h-64 object-cover"
               />
