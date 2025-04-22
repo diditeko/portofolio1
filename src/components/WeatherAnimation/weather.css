@@ -22,16 +22,16 @@
   
   /* Different weather icons */
   .weather-element.sunny {
-    background-image: url('public/weather/sun.png');
+    background-image: url('/weather/sun.png');
   }
   .weather-element.snowy {
-    background-image: url('public/weather/snowflake.png');
+    background-image: url('/weather/snowflake.png');
   }
   .weather-element.rainy {
-    background-image: url('public/weather/drop.png');
+    background-image: url('/weather/drop.png');
   }
   .weather-element.spring {
-    background-image: url('public/weather/sakura.png');
+    background-image: url('/weather/sakura.png');
   }
   
   /* Falling animation */
