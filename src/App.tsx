@@ -17,6 +17,7 @@ import Achievements from "./pages/Achievements";
 import OtherActivities from "./pages/OtherActivities";
 import Socials from "./pages/Socials";
 import NotFound from "./pages/NotFound";
+import { ThemeProvider } from "@/context/ThemeContext"; 
 
 const queryClient = new QueryClient();
 
@@ -25,24 +26,26 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <WeatherProvider>
-        <div className="relative">
-          <WeatherAnimation />
-          <BrowserRouter>
-            {/* <Navbar /> */}
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/work-portfolio" element={<WorkPortfolio />} />
-              <Route path="/side-projects" element={<SideProjects />} />
-              <Route path="/achievements" element={<Achievements />} />
-              <Route path="/socials" element={<Socials />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            {/* <Footer /> */}
-          </BrowserRouter>
-        </div>
-      </WeatherProvider>
+      <ThemeProvider>
+        <WeatherProvider>
+          <div className="relative">
+            <WeatherAnimation />
+            <BrowserRouter>
+              {/* <Navbar /> */}
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/work-portfolio" element={<WorkPortfolio />} />
+                <Route path="/side-projects" element={<SideProjects />} />
+                <Route path="/achievements" element={<Achievements />} />
+                <Route path="/socials" element={<Socials />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+              {/* <Footer /> */}
+            </BrowserRouter>
+          </div>
+        </WeatherProvider>
+      </ThemeProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

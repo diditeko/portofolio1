@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useWeather } from "@/context/WeatherContext";
-import "@/components/WeatherAnimation/weather.css"; // make sure path is correct
+import "@/components/WeatherAnimation/weather.css";
 
 const WeatherAnimation = () => {
   const { currentWeather } = useWeather();
@@ -8,18 +8,25 @@ const WeatherAnimation = () => {
 
   useEffect(() => {
     if (!currentWeather) {
-      setElements([]); // No weather selected = no animation
+      setElements([]);
       return;
     }
 
+    const screenWidth = window.innerWidth;
+    const isMobile = screenWidth < 640;
+    const iconSize = isMobile ? 20 : 30;
+    const iconCount = isMobile ? 10 : 20;
+
     const tempElements = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < iconCount; i++) {
       tempElements.push(
         <div
           key={i}
           className={`weather-element ${currentWeather}`}
           style={{
             left: `${Math.random() * 100}%`,
+            width: `${iconSize}px`,
+            height: `${iconSize}px`,
             animationDelay: `${Math.random() * 5}s`,
           }}
         />
