@@ -97,7 +97,7 @@ const Resume = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Technical Skills</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "SQL", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Big Data"].map((skill) => (
+                  {["Python", "SQL", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Big Data","Spark","Fast Api"].map((skill) => (
                     <span key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-gray-700 text-sm">
                       {skill}
                     </span>
