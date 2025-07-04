@@ -12,7 +12,7 @@ const Resume = () => {
           <h1 className="text-3xl font-bold">Resume</h1>
 
           {/* Button wrapped in anchor tag for download */}
-          <a href="public/didit eko new.pdf" download>
+          <a href="public/cv didit.pdf" download>
             <Button className="bg-green-700 hover:bg-green-800">
               <Download className="mr-2 h-4 w-4" /> Download PDF
             </Button>
@@ -24,7 +24,7 @@ const Resume = () => {
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-green-700 mb-4">Profile</h2>
             <p className="text-gray-700">
-              Experienced Data Scientist Skilled in Python, SQL, and deep learning techniques, with a strong ability to analyze complex datasets and extract meaningful insights. Proficient in data manipulation, visualization, and predictive modeling, enabling informed decision-making. Adept at collaborating with cross-functional teams to translate business requirements into data-driven strategies.
+              Experienced Data Scientist Skilled in Python,ETL, SQL, and deep learning techniques, with a strong ability to analyze complex datasets and extract meaningful insights. Proficient in data manipulation, visualization, and predictive modeling, enabling informed decision-making. Adept at collaborating with cross-functional teams to translate business requirements into data-driven strategies.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ const Resume = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Technical Skills</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "SQL", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "Big Data","Spark","Fast Api"].map((skill) => (
+                  {["Python", "SQL", "ETL","TensorFlow", "PyTorch", "Scikit-learn", "Kafka","Hadoop", "Big Data","Spark","Fast Api","PostgreSQL","MongoDB"].map((skill) => (
                     <span key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-gray-700 text-sm">
                       {skill}
                     </span>
@@ -108,7 +108,7 @@ const Resume = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Areas of Expertise</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Time Series Analysis", "Statistical Modeling", "Data Visualization"].map((skill) => (
+                  {["Machine Learning", "Deep Learning","LLM", "NLP", "Computer Vision", "Time Series Analysis", "Statistical Modeling", "Data Visualization"].map((skill) => (
                     <span key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-gray-700 text-sm">
                       {skill}
                     </span>

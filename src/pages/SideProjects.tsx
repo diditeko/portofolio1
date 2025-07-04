@@ -51,6 +51,15 @@ const projects = [
     github: "https://github.com/diditeko/Sentiment-Bert",
     demo: "https://huggingface.co/spaces/VIOLET21/Sentiment_Tweet"
   },
+  {
+    id: 6,
+    title: "Social Media Data Pipeline with Airflow, Kafka, Hadoop, Spark, and BERT",
+    description: "This ETL pipeline is an end-to-end data engineering and machine learning project designed to collect, process, analyze, and store Twitter data for sentiment analysis. It leverages modern big data tools and orchestration platforms to simulate a real-world data pipeline in production.",
+    image: "img/etl.png",
+    tags: ["ETL", "Spark", "Kafka", "Hadoop", "Bert", "PostgreSQL","Docker"],
+    github: "https://github.com/diditeko/social-media-pipeline",
+    demo: null
+  }
 ];
 
 const SideProjects = () => {
