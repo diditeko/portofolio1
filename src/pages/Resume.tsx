@@ -12,7 +12,7 @@ const Resume = () => {
           <h1 className="text-3xl font-bold">Resume</h1>
 
           {/* Button wrapped in anchor tag for download */}
-          <a href="public/cv didit.pdf" download>
+          <a href="img/cv.pdf" download>
             <Button className="bg-green-700 hover:bg-green-800">
               <Download className="mr-2 h-4 w-4" /> Download PDF
             </Button>
